@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## v1.2.0의 새로운 기능 (2026-09-06)
+
+- **시작 확인 게이트**: 대상 모드 id가 이미 존재하면 *덮어쓰기 / 이름 변경 / 재사용*을 반드시 확인 - 확인 전에는 아무것도 쓰지 않음
+- **모든 플랫폼에서 슬래시 커맨드로 트리거 가능**(관리 대상은 로컬 DSH 프리셋 디렉터리 그대로)
+- **오픈 스펙 준수 프런트매터**: 플랫 metadata, `license` 필드, 변경 이력은 루트 `CHANGELOG.md`로
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** 이 스킬은 **DeepSeek Harness** agent-preset 시스템을 대상으로 하며 **크로스 플랫폼이 아닙니다**. Codex CLI나 Claude Code에는 맞지 않습니다. DeepSeek Harness를 실행하는 경우에만 설치하세요.
 

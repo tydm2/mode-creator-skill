@@ -1,39 +1,39 @@
-# Mode anatomy (mode-anatomy) — one-time research asset
+# 模式解剖（mode-anatomy）—— 调研一次落成的资产
 
-This file holds the "how to create a mode" mechanism knowledge, kept here so we **never re-read the DSH source**. It comes from three real mode-creation sessions (novel / coding / office) cross-checked against the DSH release. The body only references this file; read it on demand.
+本文件是「怎么造一个模式」的机制知识，存这里是为了**下次不再重读 DSH 源码**。内容来自三次造模式实测（小说/编程/办公）与 DSH 发行版核对。正文只引用本文件，按需读取。
 
-## Preset root
+## 预设根目录
 
-- **User root**: `~/.dsh/.agent-presets/` (on Windows `C:\Users\<you>\.dsh\.agent-presets\`). Write here; it's scanned in real time — **no restart needed**, a new session shows it in the mode picker.
-- **Release blueprints**: `<workspace>\node_modules\@deepseek-ai\dsh\config\agent-presets\{standard,code,cordis,minimal}\`.
+- **用户根**：`~/.dsh/.agent-presets/`（Windows 即 `C:\Users\<你>\.dsh\.agent-presets\`）。写这里；发现是每次实时扫描，**无需重启**，新建会话即可在模式选择器看到。
+- **发行版蓝本**：`<workspace>\node_modules\@deepseek-ai\dsh\config\agent-presets\{standard,code,cordis,minimal}\`。
 
-## Blueprint list (which to pick)
+## 蓝本清单（选哪个）
 
-| id | Name | When to pick |
+| id | 名称 | 何时选 |
 |---|---|---|
-| standard | standard mode | default; full-featured coding agent |
-| code | PTC mode | when you need the Code Mode SDK |
-| minimal | (no zh name) | when you only need a lean persona + two tools |
-| cordis | (plugin development) | ships the cordis plugin-dev skill |
+| standard | 标准模式 | 默认；全功能编码 agent |
+| code | PTC 模式 | 要 Code Mode SDK 时 |
+| minimal | （无中文名） | 只要精简人设 + 两工具时 |
+| cordis | （插件开发） | 自带 cordis 插件开发相关 skill |
 
-## File structure
+## 文件结构
 
-- `agent.cordis.yml`: an AGENT-PLANE combination, a list of YAML rows. First row `- id: persona`, `name: '@deepseek-ai/dsh-persona'`, `config.text` is the mode persona (`{{model}}` / `{{cwd}}` auto-resolved). The rest are tool rows (bash/pwsh, fs, jobs, skills, goals, plan, compaction, subagent/workflow, ask-user, todo, web).
-- `preset.yml`: `name` (display name) + `description` (intro) + optional `order` (sorting).
-- `skills/` (optional): mode-specific skills, only visible in that mode's sessions.
+- `agent.cordis.yml`：AGENT-PLANE 组合，YAML 行列表。第一行 `- id: persona`，`name: '@deepseek-ai/dsh-persona'`，`config.text` 是模式人设（`{{model}}`/`{{cwd}}` 自动解析）。其余是工具行（bash/pwsh、fs、jobs、skills、goals、plan、compaction、subagent/workflow、ask-user、todo、web）。
+- `preset.yml`：`name`（显示名）+ `description`（介绍）+ 可选 `order`（排序）。
+- `skills/`（可选）：模式专属技能，只在该模式会话出现。
 
-## Validation API (agentPresets service)
+## 校验 API（agentPresets 服务）
 
-- `list()` / `resolve(id)` / `copy(from, id, name)` / `standingKeyFor(id)` (returns the scope key, mount OK).
-- File-shape validation: `scripts/validate-preset.mjs` (no third-party deps; checks files present, persona row, preset.yml has a name).
+- `list()` / `resolve(id)` / `copy(from, id, name)` / `standingKeyFor(id)`（返回 scope key，挂载 OK）。
+- 文件形状校验：`scripts/validate-preset.mjs`（无第三方依赖，检查文件齐全、persona 行、preset.yml 有 name）。
 
-## Probe plugin (method A) essentials
+## 探针插件（方式 A）要点
 
-- `cordis_define` (plugin: `{kind:'new', idPrefix:'preset'}`) + `cordis_run` register a temporary plugin; `inject: ['agentPresets','tools']`; expose `preset_copy` / `preset_validate` via `defineTool` in apply; `cordis_undefine` to remove when done.
-- **Known pitfall (seen in the coding mode session)**: `cordis_define`'s `plugin` param may be treated as a string at the transport layer and repeatedly fail object validation — on that, **switch to method B (file writing) immediately**, don't debug to death.
+- `cordis_define`（plugin: `{kind:'new', idPrefix:'preset'}`）+ `cordis_run` 注册临时插件；`inject: ['agentPresets','tools']`，在 apply 里用 defineTool 暴露 `preset_copy`/`preset_validate` 等；用完 `cordis_undefine` 删除。
+- **已知坑（编程模式实测）**：`cordis_define` 的 `plugin` 参数在传输层可能被当字符串、对象校验反复失败——遇到就**立刻转方式 B（文件手写）**，别死磕调试。
 
-## Isolation (explain to the user when reporting)
+## 隔离性（汇报时向用户说明）
 
-- Orchestration independent: an isolated copy that references / modifies no other preset.
-- Conversation history: stored per session, naturally isolated across modes.
-- Skills: global skills in `~/.dsh/skills` are visible to all modes; skills under `<id>/skills/` are visible only to that mode.
+- 编排独立：一份独立拷贝，不引用/不修改其它预设。
+- 对话记录：按会话独立存储，模式间天然隔离。
+- 技能：`~/.dsh/skills` 全局技能所有模式可见；放 `<id>/skills/` 的技能仅该模式可见。

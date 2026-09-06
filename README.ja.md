@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## v1.2.0 の新機能（2026-09-06）
+
+- **開始時確認ゲート**：対象モード id が既に存在する場合、*上書き / 改名 / 再利用* を必ず確認 - 確認なしでは何も書き込みません
+- **任意のプラットフォームからスラッシュコマンドで起動可能**（管理対象はローカルの DSH プリセットディレクトリのまま）
+- **オープン仕様準拠のフロントマター**：フラットな metadata、`license` フィールド、変更履歴はルート `CHANGELOG.md` へ
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** このスキルは **DeepSeek Harness** の agent-preset システムを対象としており、**クロスプラットフォームではありません**。Codex CLI や Claude Code には**対応していません**。DeepSeek Harness を実行している場合にのみインストールしてください。
 

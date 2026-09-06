@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#免责声明)
+
+## v1.2.0 新内容（2026-09-06）
+
+- **启动确认门控**：目标 id 已存在时必须确认「覆盖 / 换名 / 复用」，未确认不写任何文件
+- **任何平台可经斜杠命令文件触发**（管理对象仍是本机 DSH 预设目录）
+- **开放规范合规 frontmatter**：扁平 metadata、`license` 字段、changelog 外置到根 `CHANGELOG.md`
 
 > ⚠️ **仅限 DSH（DeepSeek Harness）。** 本技能面向 DeepSeek Harness 的 agent preset 系统，**不跨平台**。它**不**适配 Codex CLI 或 Claude Code。仅在运行 DeepSeek Harness 时安装。
 

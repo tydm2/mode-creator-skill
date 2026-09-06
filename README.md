@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## New in v1.2.0 (2026-09-06)
+
+- **Startup confirmation gate**: if the target mode id already exists, the agent must ask *overwrite / rename / reuse* - nothing is written without your confirmation
+- **Triggerable from any agent platform** via slash-command files (the management target remains the local DSH preset directory)
+- **Open-spec frontmatter**: flat metadata, `license` field, changelog externalized to the root `CHANGELOG.md`
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** This skill targets the **DeepSeek Harness** agent-preset system and is **not cross-platform**. It does **not** adapt to Codex CLI or Claude Code. Install it only if you run DeepSeek Harness.
 

@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## Новое в v1.2.0 (2026-09-06)
+
+- **Подтверждение перед запуском**: если id режима уже существует, агент обязан спросить *перезаписать / переименовать / использовать* - без подтверждения ничего не записывается
+- **Запуск с любой платформы** через файлы команд (цель управления - локальный каталог пресетов DSH)
+- **Frontmatter по открытому стандарту**: плоские метаданные, поле `license`, журнал изменений в корневом `CHANGELOG.md`
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** Этот навык нацелен на систему agent preset **DeepSeek Harness** и **не является кроссплатформенным**. Он **не** адаптируется под Codex CLI или Claude Code. Устанавливай его только если используешь DeepSeek Harness.
 

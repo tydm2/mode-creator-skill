@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## Nouveautés de la v1.2.0 (2026-09-06)
+
+- **Porte de confirmation au démarrage** : si l'id du mode existe déjà, l'agent doit demander *écraser / renommer / réutiliser* - rien n'est écrit sans votre confirmation
+- **Déclenchable depuis toute plateforme** via des fichiers de commande (la cible reste le répertoire local de préréglages DSH)
+- **Frontmatter conforme au standard ouvert** : métadonnées à plat, champ `license`, journal des modifications dans le `CHANGELOG.md` racine
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** Cette compétence cible le système d'agent presets **DeepSeek Harness** et n'est **pas multiplateforme**. Elle ne s'adapte **pas** à Codex CLI ni à Claude Code. Installez-la uniquement si vous utilisez DeepSeek Harness.
 

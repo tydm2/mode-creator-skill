@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## v1.2.0 में नया (2026-09-06)
+
+- **स्टार्टअप कन्फर्मेशन गेट**: यदि टारगेट मोड id पहले से मौजूद है, तो एजेंट *overwrite / rename / reuse* पूछेगा - पुष्टि के बिना कुछ भी लिखा नहीं जाएगा
+- **किसी भी प्लेटफ़ॉर्म से स्लैश-कमांड ट्रिगर** (प्रबंधन लक्ष्य लोकल DSH प्रीसेट डायरेक्टरी ही रहेगा)
+- **ओपन-स्पेक फ्रंटमैटर**: फ्लैट मेटाडेटा, `license` फ़ील्ड, बदलाव-इतिहास रूट `CHANGELOG.md` में
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** यह skill **DeepSeek Harness** के agent-preset सिस्टम के लिए बनी है और **क्रॉस-प्लेटफ़ॉर्म नहीं** है। यह Codex CLI या Claude Code के अनुकूल **नहीं** है। इसे केवल तभी इंस्टॉल करें जब आप DeepSeek Harness चला रहे हों।
 

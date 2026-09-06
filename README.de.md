@@ -3,9 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [हिन्दी](./README.hi.md) · [Português](./README.pt.md) · [Español](./README.es.md) · [日本語](./README.ja.md) · [Deutsch](./README.de.md) · [Français](./README.fr.md) · [Русский](./README.ru.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](./CHANGELOG.md)
 [![DSH-only](https://img.shields.io/badge/DSH--only-DeepSeek%20Harness-orange.svg)](#dsh-only)
 [![100%25 AI-crafted](https://img.shields.io/badge/100%25-AI--crafted-9cf.svg)](#disclaimer)
+
+## Neu in v1.2.0 (2026-09-06)
+
+- **Bestätigungs-Gate beim Start**: existiert die Modus-ID bereits, fragt der Agent *überschreiben / umbenennen / wiederverwenden* - ohne Bestätigung wird nichts geschrieben
+- **Von jeder Plattform auslösbar** über Command-Dateien (Verwaltungsziel bleibt das lokale DSH-Preset-Verzeichnis)
+- **Open-Spec-konformes Frontmatter**: flache Metadaten, `license`-Feld, Chronik in der Root-`CHANGELOG.md`
 
 > ⚠️ **DSH-ONLY (DeepSeek Harness).** Dieser Skill zielt auf das **agent-preset**-System des **DeepSeek Harness** ab und ist **nicht plattformübergreifend**. Er passt sich **nicht** an Codex CLI oder Claude Code an. Installiere ihn nur, wenn du DeepSeek Harness betreibst.
 
